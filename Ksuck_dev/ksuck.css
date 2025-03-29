@@ -1,0 +1,214 @@
+/* กำหนดหน้าต่างทั้งหน้า */
+* {
+    touch-action: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    
+}
+
+i{
+    background-color: #00000000;
+    user-select: none;  /* ป้องกันการเลือกข้อความ */
+    -webkit-user-select: none; /* สำหรับ Safari */
+    -ms-user-select: none; /* สำหรับ IE */
+}
+
+/* สำหรับปุ่ม navbar */
+.navbar{
+    position: fixed; /* ตรึง navbar ให้อยู่ที่ตำแหน่งคงที่ */
+    bottom: 0; /* อยู่ล่างสุดของหน้าจอ */
+    left: 0;
+    width: 100%; /* ยืดเต็มความกว้างของหน้าจอ */
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    background-color: rgb(49, 49, 49);
+
+}
+
+.navbar .navbar-item{
+    display: flex;
+    gap: 10px; 
+    
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.navbar .logo { 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.navbar-item ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.navbar-item li {
+    float: left;
+}
+
+.navbar-item li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+.ksuck_container{
+    width: 100%;
+    height: 100vh; 
+    padding: 1%;
+    background-color: rgb(122, 131, 139);
+    width: 100%;
+}
+
+.ksuck_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 91%; 
+    box-shadow: 0px 15px 14px 3px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 15px 14px 3px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 15px 14px 3px rgba(0,0,0,0.65);
+}
+
+.ksuck_content h2{
+    text-align: center;
+    color: white;
+    padding-bottom: 5%;
+   
+}
+
+/*width: 80%;          ความกว้างของ content (80% ของหน้าจอ) */
+/*max-width: 1200px;   กำหนดความกว้างสูงสุด */
+/*min-width: 320px;    กำหนดความกว้างต่ำสุด (เหมาะสำหรับมือถือ) */
+/*height: auto;        ความสูงปรับตามเนื้อหา */
+/*min-height: 500px;   ความสูงขั้นต่ำ */
+/*margin: 20px auto;   จัดให้อยู่ตรงกลางหน้าจอ (แนวนอน) */
+/*padding: 20px;       เว้นขอบด้านใน */
+/*background-color: #f4f4f4;สีพื้นหลัง */
+/*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+/*border-radius: 10px;  มุมโค้งมน */
+
+.ksuck_control , .ksuck_cam , .ksuck_command{
+    padding: 0%;
+}
+
+.ksuck_content .ksuck_cam{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ksuck_content .ksuck_cam img{
+   width: 100%;
+}
+
+.ksuck_content .ksuck_control , .ksuck_content .ksuck_command {
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+    
+}
+/*ipad respone 1180 * 820 */
+@media (max-width: 1920px) {
+    .ksuck_container{
+        position: fixed;
+    }
+}
+
+@media (max-width: 1179px) {
+    .ksuck_content{
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.ksuck_control .ksuck_btt_group{
+    padding-top: 10%;
+}
+
+.ksuck_command .ksuck_btt_group{
+    padding-top: 10%;
+}
+
+
+.ksuck_btt{
+    background-color: #2e41eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 15px;
+    width: 31%;
+    transition: background-color 0.3s ease;
+}
+/*cursor ไปโดน*/
+.ksuck_btt:hover{
+    background-color: #24263a;
+    cursor: pointer;
+}
+
+/* กด */
+.ksuck_btt:active {
+    background-color: #dd1212; /* เปลี่ยนสีเมื่อกด */
+    transform: scale(0.98); /* ลดขนาดปุ่มเล็กน้อยเมื่อกด */
+}
+
+
+
+.ksuck_btt_large{
+    width: 100%;
+}
+
+
+.ksuck_slider{
+    -webkit-appearance: none;
+
+    direction: rtl;
+
+    width: 100%;
+    height: 50px;
+    background-color: #595a69;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+.ksuck_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #93d1be;
+    cursor: pointer;
+  }
+  

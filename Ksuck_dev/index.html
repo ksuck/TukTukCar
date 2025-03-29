@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KSUCK MENU</title>
+
+    <link rel="stylesheet" href="ksuck.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- main web-->
+    <div class="ksuck_container">
+        <div class="ksuck_content">
+            <!-- Control -->
+            <div class="ksuck_control">
+                <h2>Control Car</h2>
+                <input type="range" min="50" max="130" value="90"  class="ksuck_slider" id="Steering_wheel1">
+                <div class="ksuck_btt_group">
+                    <button class="ksuck_btt" id="servoLeft1">130°</button>
+                    <button class="ksuck_btt" id="servoCenter1">90°</i></button>
+                    <button class="ksuck_btt" id="servoRight1">50°</i></button>
+                </div>
+                <div class="ksuck_btt_group">
+                    <button class="ksuck_btt  ksuck_btt_large"  onclick="sendClick('btn_capture')" ><i class="fa-solid fa-image"></i> Capture </button>
+                    <button class="ksuck_btt  ksuck_btt_large"  onclick="sendClick('')" ><i class="fa-solid fa-image"></i></button>
+                    <button class="ksuck_btt  ksuck_btt_large"  onclick="sendClick('')" ><i class="fa-solid fa-image"></i></button>
+                </div>
+            </div>
+            <!-- Live Cam -->
+            <div class="ksuck_cam">
+                <h2>ESP CAM</h2>
+                <iframe src="http://building.local:83/stream" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Command -->
+            <div class="ksuck_command">
+                <h2>Command</h2>
+                <input type="range" min="50" max="130" value="90"  class="ksuck_slider" id="Steering_wheel2">
+                <div class="ksuck_btt_group">
+                    <button class="ksuck_btt" id="servoLeft2">130°</button>
+                    <button class="ksuck_btt" id="servoCenter2">90°</i></button>
+                    <button class="ksuck_btt" id="servoRight2">50°</i></button>
+                </div>
+                <div class="ksuck_btt_group">
+                    <!-- 1-3 -->
+                    <button class="ksuck_btt"  onclick="controlLED('on')" ><i class="fa-solid fa-bolt"></i></button>
+                    <button class="ksuck_btt"  id="moveForward"><i class="fa-solid fa-arrow-up"></i></button>
+                    <button class="ksuck_btt"><i class="fa-solid fa-image"></i></button>
+                     <!-- 4-6 -->
+                    <button class="ksuck_btt" id="moveLeft"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="ksuck_btt" id="moveStop"><i class="fa-solid fa-x"></i></button>
+                    <button class="ksuck_btt" id="moveRight"><i class="fa-solid fa-arrow-right"></i></button>
+                     <!-- 7-9 -->
+                    <button class="ksuck_btt" id="moveAuto">Auto</button>
+                    <button class="ksuck_btt" id="moveBackward"><i class="fa-solid fa-arrow-down"></i></button>
+                    <button class="ksuck_btt"><i class="fa-solid fa-border-none"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- navigation bar -->
+    <nav>
+        <div class="navbar"> 
+            <div class="navbar-item">
+                <ul>
+                    <!--<li><a href="#home">home</a></li>
+                    <li><a href="#home">camsetting</a></li> -->
+                </ul>
+            </div>   
+            <div class="logo">
+                <a href="#home">KSUCK</a>
+            </div>
+            <div class="navbar-item">
+                <ul>
+                    <li><a href="http://building.local"  target="_blank"><i class="fa-solid fa-camera-retro"></i></a></li>
+                </ul>
+            </div>   
+        </div>
+    </nav>
+    
+
+    <script src="ksuck_js.js"></script>
+</body>
+</html>

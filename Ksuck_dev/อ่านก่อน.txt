@@ -1,0 +1,11 @@
+python version 3.9 หรืออะไรก็ได้
+ติดตั้ง library
+
+pip install ultralytics 
+pip install numpy
+pip install opencv-python
+pip install threaded
+
+
+นำไฟล์นี้ไปวางบน Xampp ที่ htdocs
+line_notify ปิดให้บริการแล้ว
